@@ -16,16 +16,14 @@
 -->
 
 <resources>
-
     <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/theme_primary_500</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark_700</item>
         <item name="colorAccent">@color/theme_accent</item>
+        <!-- title text color -->
+        <item name="android:textColorPrimary">@color/theme_text_color_primary</item>
+        <!-- subtitle text color -->
+        <item name="android:textColorSecondary">?android:textColorSecondary</item>
     </style>
-
-    <style name="Theme.Bacon.Detail">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
 </resources>
