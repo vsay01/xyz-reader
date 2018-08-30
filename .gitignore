@@ -38,3 +38,37 @@ captures/
 
 # Keystore files
 *.jks
+XYZReader/.idea/gradle.xml
+XYZReader/.idea/misc.xml
+XYZReader/.idea/modules.xml
+XYZReader/.idea/runConfigurations.xml
+XYZReader/.idea/vcs.xml
+XYZReader/.idea/workspace.xml
+XYZReader/.idea/caches/build_file_checksums.ser
+XYZReader/.idea/libraries/Gradle____local_aars____Users_u742670_AndroidStudioProjects_xyz_reader_XYZReader_libs_volley_jar_unspecified_jar.xml
+XYZReader/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml
+XYZReader/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml
+XYZReader/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml
+XYZReader/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml
+XYZReader/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml
+XYZReader/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_2.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_2_jar.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_design_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_palette_v7_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_v13_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml
+XYZReader/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml
+XYZReader/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml
