@@ -3,7 +3,6 @@ package com.example.xyzreader.ui;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +13,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.app.ShareCompat;
 import android.support.v4.content.Loader;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
@@ -158,18 +156,17 @@ public class ArticleDetailFragment extends Fragment implements
         getActivityCast().setSupportActionBar(toolbar);
         getActivityCast().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle("");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getActivityCast().getWindow();
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
-
-        FloatingActionButton upFAB = mRootView.findViewById(R.id.up_fab);
-        upFAB.setOnClickListener(new View.OnClickListener() {
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                ((AppCompatActivity) getActivity()).onSupportNavigateUp();
+            public void onClick(View v) {
+                getActivityCast().onBackPressed();
             }
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window w = getActivityCast().getWindow();
+            w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
 
         collapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing);
         AppBarLayout appBarLayout = (AppBarLayout) mRootView.findViewById(R.id.appbar);
@@ -181,11 +178,9 @@ public class ArticleDetailFragment extends Fragment implements
                     collapsingToolbarLayout.setTitleEnabled(true);
                     collapsingToolbarLayout.setTitle(titleView.getText());
                     isShow = true;
-                    getActivity().invalidateOptionsMenu();
                 } else if (state.name().equalsIgnoreCase(State.EXPANDED.name())) {
                     collapsingToolbarLayout.setTitleEnabled(false);
                     isShow = false;
-                    getActivity().invalidateOptionsMenu();
                 } else {
                     collapsingToolbarLayout.setTitleEnabled(false);
                 }
@@ -241,35 +236,6 @@ public class ArticleDetailFragment extends Fragment implements
             bylineView.setText("N/A");
             bodyView.setText("N/A");
         }
-    }
-
-    /*@Override
-    public void onPrepareOptionsMenu(Menu menu) {
-        super.onPrepareOptionsMenu(menu);
-        MenuItem menuItem = menu.findItem(R.id.action_share);
-        menuItem.setVisible(isShow);
-    }*/
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        Log.d(ArticleDetailFragment.TAG, "onCreateOptionMenu");
-        inflater.inflate(R.menu.detail_menu, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_share:
-                startShare();
-                break;
-            case android.R.id.home:
-                getActivity().onBackPressed();
-                break;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
