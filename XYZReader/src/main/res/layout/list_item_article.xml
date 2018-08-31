@@ -48,7 +48,8 @@
             android:paddingBottom="16dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            tools:text="Subhead"/>
+            tools:text="Subhead"
+            android:textColor="@android:color/secondary_text_dark"/>
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

@@ -4,5 +4,6 @@
         android:id="@+id/action_share"
         android:title="@string/action_share"
         android:icon="@drawable/ic_share"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        android:visible="true"/>
 </menu>
